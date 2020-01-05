@@ -16,8 +16,9 @@ module.exports = {
             { text: 'Home', link: '/' },
             { text: 'Components', link: '/components/' },
             { text: '3rd Party', link: '/3rdParty/' },
-            { text: 'External', link: 'https://google.com' },
+            { text: 'Dev Tools', link: '/DevTools/' },
         ],
         sidebar: 'auto'
-    }
+    },
+    plugins: ['@vuepress/last-updated']
 }

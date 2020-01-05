@@ -19,192 +19,7 @@ Intellectual Property of DevTeam
             www.cdevteam.com
 
 # Table of Contents
-
-Introduction        4
-
-Goals        4
-
-Scope        4
-
-Fixing Problems in the Guide        4
-
-Fixing Problems in Code        5
-
-When Does this Guide Apply        5
-
-Code changes made to existing systems not written to this standard        5
-
-Code written for customers that require that their standards should be adopted        5
-
-Naming Guidelines        5
-
-Overview        6
-
-General Rules        6
-
-Capitalization Styles        6
-
-Pascal Case        6
-
-Camel Case        7
-
-Upper Case        7
-
-Case Sensitivity (not applicable to VB)        8
-
-Abbreviations        9
-
-Namespaces        10
-
-Usage        10
-
-Naming        10
-
-Standard Prefixes        10
-
-Grouping and ordering        11
-
-Formatting        12
-
-Indent and spacing        12
-
-Braces        12
-
-Properties        13
-
-Enumerations        13
-
-Return Statements        13
-
-Switch Statements        13
-
-Parentheses        14
-
-Empty Lines        14
-
-Line Breaking        15
-
-Table of Standard Control Prefixes        17
-
-Code Commenting        18
-
-Language Usage        22
-
-Declaration Order        22
-
-Visibility        22
-
-Constants        22
-
-Readonly vs Const        22
-
-String and Resources        23
-
-Properties        23
-
-Methods / Functions        24
-
-Parameters        24
-
-Classes        25
-
-Interfaces        25
-
-Structs        25
-
-Enumerations        26
-
-Local variables        27
-
-Event Handlers        27
-
-Operators        27
-
-If Statements        27
-
-Using &quot;var&quot;        28
-
-Flow Control        30
-
-Exceptions        31
-
-User Controls        32
-
-Generics        33
-
-Classes        33
-
-Methods        34
-
-.ASPNET Best Practices and Tips        35
-
-Use Paging Eficiently        35
-
-Generate New Encryption Keys        35
-
-Encrypt Sensitive Sections of your Web.Config        35
-
-Set Retail=&quot;True&quot; in your Machine.Config        35
-
-Create a new Application Pool for your Site        36
-
-Set the memory limit for your Application Pool        36
-
-Develop a repeatable Deployment Process and Automate It        36
-
-Build and Reference Release Versions of All Assemblies        36
-
-Load Test        36
-
-Turn off Tracing unless until required        36
-
-Turn off Session State, if not required        37
-
-Disable View State of a Page if Possible        37
-
-Use the String Builder to concatenate string        38
-
-Do NOT use Ajax TabContainer Control        38
-
-Loading Page for all web applications        38
-
-Team Explorer Best Practices        38
-
-Check-In        39
-
-Review all the pending changes associated with your workspace.        39
-
-Check-Out        39
-
-Shelving and Unshelving        39
-
-Database Best Practices        41
-
-Table Prefix        41
-
-Table Name        41
-
-Field Name        41
-
-Fields Required and Order        41
-
-Acronyms        42
-
-List of Acronyms        42
-
-References        46
-
-Attachment I – Internal Practices        47
-
-Code Separation by Concern        47
-
-Date Entry Controls        47
-
-Database Transaction Management        47
-
-Model Binding        47
-
-LINQ Query Execution Read Uncommitted        47
+[[toc]]
 
 #  Introduction
 
@@ -280,7 +95,7 @@ Remove the Visual Basic reference from your project. Making use of the original 
 - Make sure to capitalize compound words correctly; if the word is not hyphenated, then it does not need a capital letter in the camel- or Pascal-cased form. For example, &quot;metadata&quot; is written as Metadata in Pascal-case, not MetaData.
 - Acronyms should be Pascal-case as well (e.g. &quot;Xml&quot; or &quot;Sql&quot;) unless they are only two letters long. Acronyms at the beginning of a camel-case identifier are always all lowercase (more info see Abbreviations).
 - Identifiers differing only by case may be defined within the same scope only if they identify different language elements (e.g. a local variable and a property).
-
+```C#
 public void UpdateLength(int newLength, bool refreshViews)
 
 {
@@ -290,7 +105,7 @@ int length = Length;
 // ...
 
 }
-
+```
 - You may not use identifiers that are keywords in C#; neither may you use the @-symbol to turn a keyword into a valid identifier.
 
 ## Capitalization Styles
@@ -312,11 +127,11 @@ The first letter of an identifier is lowercase and the first letter of each subs
 ### Upper Case
 
 All letters in the identifier are capitalized. Use this convention only for identifiers that consist of two or fewer letters. For example:
-
+```C#
 System.IO
 
 System.Web.IO
-
+```
 You might also have to capitalize identifiers to maintain compatibility with existing, unmanaged symbol schemes, where all uppercase characters are often used for enumerations and constant values. In general, these symbols should not be visible outside of the assembly that uses them.
 
 The following table summarizes the capitalization rules and provides examples for the different types of identifiers:
@@ -347,33 +162,33 @@ To avoid confusion and guarantee cross-language interoperation, follow these rul
 
 1. Do not use names that require case sensitivity. Components must be fully usable from both case-sensitive and case-insensitive languages. Case-insensitive languages cannot distinguish between two names within the same context that differ only by case. Therefore, you must avoid this situation in the components or classes that you create.
 2. Do not create two namespaces with names that differ only by case. For example, a case insensitive language cannot distinguish between the following two namespace declarations.
-
+```C#
 namespace MyLibrary{}
 
 namespace Mylibrary{}
-
+```
 1. Do not create a function with parameter names that differ only by case. The following example is incorrect.
 
 void MyFunction(string a, string A);
 
 1. Do not create a namespace with type names that differ only by case. In the following example, Point p and POINT p are inappropriate type names because they differ only by case.
-
+```C#
 System.Windows.Forms.Point p;
 
 System.Windows.Forms.POINT p;
-
+```
 1. Do not create a type with property names that differ only by case. In the following example, int Color and int COLOR are inappropriate property names because they differ only by case.
-
+```C#
 int Color {get; set;}
 
 int COLOR {get; set;}
-
+```
 1. Do not create a type with method names that differ only by case. In the following example, calculate and Calculate are inappropriate method names because they differ only by case
-
+```C#
 void calculate();
 
 void Calculate();
-
+```
 ## Abbreviations
 
 To avoid confusion and guarantee cross-language interoperation, follow these rules regarding the use of abbreviations:
