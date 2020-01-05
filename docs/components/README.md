@@ -1,6 +1,18 @@
 # Component List 
 [[toc]]
 
+# Common Inputs
+
+Input Validations
+Use: 
+```HTML
+
+```
+
+``` JS
+```
+
+
 # SquareOption
 Este componente es para el Menu de Opciones:
 <br/>
@@ -16,7 +28,7 @@ Use:
 </div>
 ```
 
-``` js
+``` JS
 optionList: 
 [
     {
