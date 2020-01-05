@@ -1,9 +1,14 @@
-# Component List 
+**Guide**
+# Table of Contents
 [[toc]]
 
-# Common Inputs
+# Pending Component To Do
 
-Input Validations
+# Component List 
+
+## Common Inputs
+
+Input with Validations
 Use: 
 ```HTML
 
@@ -13,8 +18,8 @@ Use:
 ```
 
 
-# SquareOption
-Este componente es para el Menu de Opciones:
+## SquareOption
+
 <br/>
 ![Lado A](./MenuA.png)
 <br/>
@@ -45,7 +50,7 @@ optionList:
 ]
 ```
 
-# Vue Good Table
+## Vue Good Table
 ![Tabla](./Table.png)
 
 <b>Use: </b>
@@ -68,11 +73,11 @@ optionList:
     @on-per-page-change="onPerPageChange"
 >
     <div slot="emptystate">
-        El estudiante no cuenta con PEI o PS en sistema.
+        No Existe informaciónn en sistema.
     </div>
     <template slot="table-row" slot-scope="props">
         <span v-if="props.column.label == 'Acción'">
-           
+           Acciones (Button, DropDown, etc..)
         </span>
         <span v-else-if="props.column.field == 'peiStatusDescription'">
             <span :class="'badge badges ' + getPeiStatusClass(props.formattedRow[props.column.field])">{{
@@ -180,3 +185,4 @@ initColumns() {
 }
 
 ```
+
