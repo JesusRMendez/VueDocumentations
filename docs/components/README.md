@@ -9,20 +9,33 @@
 ## Common Inputs
 
 Input with Validations
-Use: 
+
+![Input](./Input.png)
+
+**Use**: 
 ```HTML
+<ValidationProvider :rules="required" immediate v-slot="{ errors, invalid }" name="">
+<CustomInput
+    v-model="model.Phone"
+    :error="errors[0]"
+    :invalid="invalid"
+    v-bind.sync="invalid"
+/>
 
+</ValidationProvider>
 ```
-
-``` JS
+::: tip
+If want show message: "El campo Telefono adicional es obligatorio" use the property name of ValidationProvider
+example: 
+```HTML
+<ValidationProvider :rules="required" immediate v-slot="{ errors, invalid }" name="Telefono Adicional"></ValidationProvider>
 ```
+:::
 
 
 ## SquareOption
 
-<br/>
 ![Lado A](./MenuA.png)
-<br/>
 ![Lado B Descripción](./MenuB.png)
 
 Use:
