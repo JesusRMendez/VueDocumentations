@@ -1,9 +1,9 @@
 ---
 home: true
-heroImage: /hero.png
+# heroImage: /hero.png
 heroText: DevTeam
-tagline: Hero subtitle
-actionText: Coding Standards v5 →
-actionLink: /codingStandard/
+actionText: Components →
+actionLink: /components/
+
 footer: Copyright © 2019-present CDevTeam
 ---

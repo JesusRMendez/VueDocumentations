@@ -14,6 +14,7 @@ module.exports = {
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },
+            { text: 'Coding Standards v5', link: '/codingStandard/' },
             { text: 'Components', link: '/components/' },
             { text: '3rd Party', link: '/3rdParty/' },
             { text: 'Dev Tools', link: '/DevTools/' },

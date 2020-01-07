@@ -2,11 +2,16 @@
 # Table of Contents
 [[toc]]
 
-# Pending Component To Do
+# Components in Development
+
+| Component     | Team          | Developer  | Date |
+| ------------- |:-------------:| -----:| -----:|
+| CustomDropDown  | Team 4 | Maria | 07/Jan./2020|
+| SelectedEvaluation  | Team 3 | Guido | 06/Jan./2020|
 
 # Component List 
 
-## Common Inputs
+## Custom Input
 
 Input with Validations
 
@@ -31,6 +36,7 @@ example:
 <ValidationProvider :rules="required" immediate v-slot="{ errors, invalid }" name="Telefono Adicional"></ValidationProvider>
 ```
 :::
+
 
 
 ## SquareOption
