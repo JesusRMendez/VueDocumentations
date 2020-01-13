@@ -7,6 +7,10 @@
 | Component     | Team          | Developer  | Date |
 | ------------- |:-------------:| -----:| -----:|
 | CustomDropDown  | Team 4 | Maria | 07/Jan./2020|
+| CustomInputText  | Team 4 | Maria | 13/Jan./2020|
+| CustomTextarea  | Team 4 | Maria | 13/Jan./2020|
+| CustomDatePicker  | Team 4 | Maria | 13/Jan./2020|
+| CustomFileUpload  | Team 4 | Maria | 13/Jan./2020|
 | SelectedEvaluation  | Team 3 | Guido | 06/Jan./2020|
 
 # Component List 
