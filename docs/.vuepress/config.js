@@ -19,7 +19,7 @@ module.exports = {
             { text: '3rd Party', link: '/3rdParty/' },
             { text: 'Dev Tools', link: '/DevTools/' },
         ],
-        sidebar: 'auto'
+        sidebar: 'off'
     },
     plugins: ['@vuepress/last-updated']
 }
